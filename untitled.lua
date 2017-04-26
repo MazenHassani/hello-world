@@ -91,41 +91,42 @@ end
         buf = buf.."<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">";
         buf = buf.."</head><div class=\"container\">";
         buf = buf.."<h1>Decentralized Task Assignment</h1>";
+        buf = buf.."<h3>Agent</h3>";
         buf = buf.."<form role=\"form\">";
         buf = buf.."<div class=\"radio\">";
-        buf = buf.."<label><input type=\"radio\" name=\"color\" value=\"off\" onclick=\"this.form.submit()\">off</input>";
-        buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"forward\" onclick=\"this.form.submit()\">forward</input>";
-        buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"backward\" onclick=\"this.form.submit()\">backward</input>";
-        buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"clockwise\" onclick=\"this.form.submit()\">clockwise</input>";
-        buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"counterclockwise\" onclick=\"this.form.submit()\">counterclockwise</input>";
+        buf = buf.."<label><input type=\"radio\" name=\"control\" value=\"off\" onclick=\"this.form.submit()\">off</input>";
+        buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"forward\" onclick=\"this.form.submit()\">forward</input>";
+        buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"backward\" onclick=\"this.form.submit()\">backward</input>";
+        buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"clockwise\" onclick=\"this.form.submit()\">clockwise</input>";
+        buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"counterclockwise\" onclick=\"this.form.submit()\">counterclockwise</input>";
         buf = buf.."</label></div>";
         --buf = buf.."<div class=\"radio\">";
-        --buf = buf.."<label><input type=\"radio\" name=\"color\" value=\"yellow\" onclick=\"this.form.submit()\">yellow</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"pink\" onclick=\"this.form.submit()\">pink</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"orange\" onclick=\"this.form.submit()\">orange</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"color\" value=\"aqua\" onclick=\"this.form.submit()\">aqua</input>";     
+        --buf = buf.."<label><input type=\"radio\" name=\"control\" value=\"yellow\" onclick=\"this.form.submit()\">yellow</input>";
+        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"pink\" onclick=\"this.form.submit()\">pink</input>";
+        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"orange\" onclick=\"this.form.submit()\">orange</input>";
+        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"aqua\" onclick=\"this.form.submit()\">aqua</input>";     
         --buf = buf.."</label></div>";
         buf = buf.."</form>";
         buf = buf.."</div>";
         buf = buf.."</html>"
 
-if(_GET.color == "off")then
+if(_GET.control == "off")then
               off()
-elseif(_GET.color == "forward")then
+elseif(_GET.control == "forward")then
               forward()
-elseif(_GET.color == "backward")then
+elseif(_GET.control == "backward")then
               backward()          
-elseif(_GET.color == "clockwise")then
+elseif(_GET.control == "clockwise")then
               clockwise()
-elseif(_GET.color == "counterclockwise")then
+elseif(_GET.control == "counterclockwise")then
               counterclockwise()          
--- elseif(_GET.color == "yellow")then
+-- elseif(_GET.control == "yellow")then
 --               yellow()
--- elseif(_GET.color == "pink")then
+-- elseif(_GET.control == "pink")then
 --               pink()          
--- elseif(_GET.color == "orange")then
+-- elseif(_GET.control == "orange")then
 --               orange()
--- elseif(_GET.color == "aqua")then
+-- elseif(_GET.control == "aqua")then
 --               aqua()                                    
 end
 
