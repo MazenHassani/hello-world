@@ -41,30 +41,6 @@ pwm.setduty(right,180)
 pwm.setduty(left,180)
 end
 
--- function yellow()
--- pwm.setduty(r,0)
--- pwm.setduty(g,0)
--- pwm.setduty(b,1023)
--- end
-
--- function aqua()
--- pwm.setduty(r,1023)
--- pwm.setduty(g,0)
--- pwm.setduty(b,0)
--- end
-
--- function pink()
--- pwm.setduty(r,0)
--- pwm.setduty(g,1023)
--- pwm.setduty(b,0)
--- end
-
--- function orange()
--- pwm.setduty(r,0)
--- pwm.setduty(g,433)
--- pwm.setduty(b,1023)
--- end
-
 srv=net.createServer(net.TCP)
 srv:listen(80,function(conn)
     conn:on("receive", function(client,request)
@@ -100,12 +76,6 @@ end
         buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"clockwise\" onclick=\"this.form.submit()\">clockwise</input>";
         buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"counterclockwise\" onclick=\"this.form.submit()\">counterclockwise</input>";
         buf = buf.."</label></div>";
-        --buf = buf.."<div class=\"radio\">";
-        --buf = buf.."<label><input type=\"radio\" name=\"control\" value=\"yellow\" onclick=\"this.form.submit()\">yellow</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"pink\" onclick=\"this.form.submit()\">pink</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"orange\" onclick=\"this.form.submit()\">orange</input>";
-        --buf = buf.."<label><label><input type=\"radio\" name=\"control\" value=\"aqua\" onclick=\"this.form.submit()\">aqua</input>";     
-        --buf = buf.."</label></div>";
         buf = buf.."</form>";
         buf = buf.."</div>";
         buf = buf.."</html>"
@@ -119,15 +89,7 @@ elseif(_GET.control == "backward")then
 elseif(_GET.control == "clockwise")then
               clockwise()
 elseif(_GET.control == "counterclockwise")then
-              counterclockwise()          
--- elseif(_GET.control == "yellow")then
---               yellow()
--- elseif(_GET.control == "pink")then
---               pink()          
--- elseif(_GET.control == "orange")then
---               orange()
--- elseif(_GET.control == "aqua")then
---               aqua()                                    
+              counterclockwise()                                   
 end
 
         client:send(buf)
