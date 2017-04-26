@@ -4,17 +4,13 @@ print(wifi.sta.getip())
 
 right=1
 left=6
--- b=4
 
 gpio.mode(right,gpio.OUTPUT)
 gpio.mode(left,gpio.OUTPUT)
--- gpio.mode(b,gpio.OUTPUT)
 pwm.setup(right,100,0)
 pwm.setup(left,100,0)
--- pwm.setup(b,1000,1023)
 pwm.start(right)
 pwm.start(left)
--- pwm.start(b)
 
 function off()
 pwm.setduty(right,0)
