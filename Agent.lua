@@ -63,7 +63,7 @@ end
         buf = buf.."<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css\">";
         buf = buf.."</head><div class=\"container\">";
         buf = buf.."<h1>Decentralized Task Assignment</h1>";
-        buf = buf.."<h3>AgentX</h3>";
+        buf = buf.."<h3>Agent</h3>";
         buf = buf.."<form role=\"form\">";
         buf = buf.."<div class=\"radio\">";
         buf = buf.."<label><input type=\"radio\" name=\"control\" value=\"off\" onclick=\"this.form.submit()\">off</input>";
@@ -85,7 +85,7 @@ elseif(_GET.control == "backward")then
 elseif(_GET.control == "clockwise")then
               clockwise()
 elseif(_GET.control == "counterclockwise")then
-              counterclockwise()                                
+              counterclockwise()                                   
 end
 
         client:send(buf)
